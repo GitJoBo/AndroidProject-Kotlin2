@@ -90,4 +90,10 @@ abstract class TitleBarFragment<A : AppActivity> : AppFragment<A>(), TitleBarAct
         }
         return titleBar
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        immersionBar?.removeSupportAllView()
+        immersionBar = null
+    }
 }

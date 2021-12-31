@@ -197,5 +197,7 @@ abstract class AppActivity : BaseActivity(),
             hideDialog()
         }
         dialog = null
+        immersionBar?.removeSupportAllView()
+        immersionBar = null
     }
 }
